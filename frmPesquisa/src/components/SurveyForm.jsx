@@ -1,5 +1,6 @@
 import {Formik, Form, Field, ErrorMessage} from "formik"
 import * as Yup from "yup"
+import { useNavigate } from "react-router-dom"
 
 const schema = Yup.object({
     name: Yup.string().required("Nome obrigatório"),
@@ -10,6 +11,7 @@ const schema = Yup.object({
     .required("Email obrigatório"),
 
     number: Yup.number()
+    .typeError("Digite um número válido")
     .min(1, "Idade inválida")
     .max(120, "Idade inválida")
     .required("Idade obrigatória"),
@@ -18,10 +20,16 @@ const schema = Yup.object({
     .required("Selecione uma área"),
 
     recommend: Yup.string()
-    .required("Selecione uma opção")
+    .required("Selecione uma opção"),
+
+    tech: Yup.array().min(1, "Selecione pelo menos uma tecnologia que você usa"),
+
 })
 
 function SurveyForm() {
+
+    const navigate = useNavigate();
+
     return (
         <Formik
 
@@ -162,14 +170,25 @@ function SurveyForm() {
                     name="comments"
                     placeholder="Deixe seu comentário aqui..."
                 />
-                <button id="enviar" type="submit">
-                    Enviar
-                </button>
+                <div className="button-group">
+
+                    <button id="home" type="button" onClick={() => navigate("/")}>
+                        Home
+                    </button>
+
+                    <button id="enviar" type="submit">
+                        Enviar
+                    </button>
+
+                    <button id="sobre" type="button" onClick={() => navigate("/sobre")}>
+                        Sobre
+                    </button>
+                </div>
+
 
             </Form>
 
         </Formik>
     )
 }
-
 export default SurveyForm

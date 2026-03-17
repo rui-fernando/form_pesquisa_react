@@ -47,3 +47,8 @@ nav a{
 nav a:hover{
     color: #0060f06f
 }
+
+#home:hover{
+    background-color: #0b3da7;
+    color: #c2d0ed;
+}

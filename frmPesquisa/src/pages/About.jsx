@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
 function About () {
+
+    const navigate = useNavigate();
+    
     return (
         <div className="page-container">
             <h1 style={{
@@ -40,6 +45,9 @@ function About () {
             </p>
 
 
+            <button id="home" type="button" onClick={() => navigate("/")}>
+                Home
+            </button>
 
         </div>
     );

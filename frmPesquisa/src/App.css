@@ -73,22 +73,6 @@ h1, p {
     text-align: center;
 }
 
-#submit {
-    width: 100%;
-    margin-top: 25px;
-    padding: 12px;
-    background-color: #2563eb;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-#submit:hover {
-    background-color: #1d4ed8;
-}
 
 @media (max-width: 500px) {
     body {
@@ -134,18 +118,6 @@ textarea:focus {
   align-items: center;
 }
 
-#enviar{
-  display: block;      /* Garante que ele se comporte como bloco */
-  margin: 20px auto;   /* O 'auto' nas laterais centraliza o botão horizontalmente */
-  padding: 10px 20px;
-  border-radius: 4cm;
-  background-color: #499bce70;
-}
-
-#enviar:hover{
-  color: #0060f06f;
-  cursor:pointer ;
-}
 
 .form-wrapper {
   min-height: 100vh;
@@ -187,4 +159,43 @@ textarea:focus {
 .form-card textarea {
   padding: 12px;
   border-radius: 12px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 25px;
+    
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #6281c3;
+}
+
+#enviar {
+    background-color: #2563eb;
+    color: white;
+}
+
+#enviar:hover {
+    background-color: #1d4ed8;
+}
+
+/* botões secundários */
+#home, #sobre {
+    background-color: #a2afcb;
+    color: #111827;
+}
+
+#home:hover, #sobre:hover {
+    background-color: #a2afcb;
 }
