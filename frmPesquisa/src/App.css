@@ -1,0 +1,190 @@
+*{
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+      'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+      'Helvetica Neue', sans-serif;
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 0.25em;
+}
+
+#description {
+    text-align: center;
+    margin-bottom: 2em;
+    color: #4b5563;
+}
+
+#survey-form {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.simnao{
+  display: grid;
+  /* Cria duas colunas que ocupam apenas o tamanho do conteúdo */
+  grid-template-columns: auto auto; 
+  /* Centraliza o grid inteiro dentro da div pai */
+  justify-content: center; 
+  gap: 15px; /* Ajuste o espaço entre o 'Sim' e o 'Não' aqui */
+  margin-top: 10px;
+
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: #2563eb;
+}
+
+h1, p {
+    margin-top: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#submit {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #2563eb;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #1d4ed8;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    #survey-form {
+        padding: 20px;
+    }
+}
+
+.error {
+    color: #dc2626;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.tech-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#addcomments{
+  text-align: center;
+}
+
+.page-layout{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1100px;
+  margin: 60px auto;
+  gap: 60px;
+  align-items: center;
+}
+
+#enviar{
+  display: block;      /* Garante que ele se comporte como bloco */
+  margin: 20px auto;   /* O 'auto' nas laterais centraliza o botão horizontalmente */
+  padding: 10px 20px;
+  border-radius: 4cm;
+  background-color: #499bce70;
+}
+
+#enviar:hover{
+  color: #0060f06f;
+  cursor:pointer ;
+}
+
+.form-wrapper {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.form-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.form-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+.form-card label {
+  margin-top: 18px;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+  padding: 12px;
+  border-radius: 12px;
+}
